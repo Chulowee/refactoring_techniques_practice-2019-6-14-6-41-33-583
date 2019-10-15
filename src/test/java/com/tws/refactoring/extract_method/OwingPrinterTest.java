@@ -47,9 +47,9 @@ public class OwingPrinterTest {
         String actual = owingPrinter.printTotal("Banana", orderList);
         assertEquals(
                 "*****************************\n"+
-                        "****** Customer totals ******\n"+
-                        "*****************************\n"+
-                        "name: Banana\n" + "amount: 36.0", actual);
+                         "****** Customer totals ******\n"+
+                         "*****************************\n"+
+                         "name: Banana\n" + "amount: 36.0", actual);
     }
 
     private List<Order> addOrderInOrderList(int amount) {

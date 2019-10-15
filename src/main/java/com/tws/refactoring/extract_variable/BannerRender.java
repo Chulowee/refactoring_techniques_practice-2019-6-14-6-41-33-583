@@ -2,14 +2,16 @@ package com.tws.refactoring.extract_variable;
 
 public class BannerRender {
 
-    public static final String MAC = "MAC";
-    public static final String IE = "IE";
-    public static final String BANNER = "banner";
+    private static final String MAC = "MAC";
+    private static final String IE = "IE";
+    private static final String BANNER = "banner";
+    private final String IE_ON_MAC = "IE on Mac?";
 
-    String renderBanner(String platform, String browser) {
-        if ((platform.toUpperCase().contains(MAC)) &&
-                (browser.toUpperCase().contains(IE))) {
-            return "IE on Mac?";
+    public String renderBanner(String platform, String browser) {
+        boolean isPlatformMAC = platform.toUpperCase().contains(MAC);
+        boolean isBrowserIE = browser.toUpperCase().contains(IE);
+        if (isPlatformMAC && isBrowserIE) {
+            return IE_ON_MAC;
         }
         return BANNER;
     }

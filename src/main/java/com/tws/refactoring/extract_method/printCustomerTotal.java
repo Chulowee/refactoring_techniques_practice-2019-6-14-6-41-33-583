@@ -7,7 +7,9 @@ public class printCustomerTotal {
     String printTotal(String name, List<Order> orders) {
         Iterator<Order> orderList = orders.iterator();
         double totalAmount = 0.0;
+
         totalAmount = getTotalAmount(orderList, totalAmount);
+
         return  "*****************************\n"+
                 "****** Customer totals ******\n"+
                 "*****************************\n"+
